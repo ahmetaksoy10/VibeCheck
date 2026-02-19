@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBKtMNpGT1NTgsf9IkoHHRbFJewuKjerX4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>470666199686</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ahmetaksoy.VibeCheck</string>
+	<key>PROJECT_ID</key>
+	<string>vibecheck-560b7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vibecheck-560b7.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:470666199686:ios:926f097923116429c3c707</string>
+</dict>
+</plist>
