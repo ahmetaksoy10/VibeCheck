@@ -23,10 +23,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        var content = cell.defaultContentConfiguration()
-        content.text = "test"
-        cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
+        cell.documentID.text = ""
+        cell.postImage.image = UIImage(systemName: "photo.fill")
+        cell.usernameLabel.text = "ahmetaksoy_10"
+        cell.caption.text = "harika"
         return cell
     }
 

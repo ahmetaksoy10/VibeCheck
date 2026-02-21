@@ -18,7 +18,7 @@ class RegisterViewViewModel {
                 self.errorMessage = error.localizedDescription
                 completion(false)
             } else {
-                let firestore = Firestore.firestore().collection("Posts")
+                let firestore = Firestore.firestore().collection("Users")
                 let userInfo = ["username": self.name, "email": self.email, "id": Auth.auth().currentUser!.uid, "profileImageUrl": ""] as [String: Any]
                 firestore.addDocument(data: userInfo) { error in
                     if let error = error {
