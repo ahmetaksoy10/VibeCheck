@@ -14,7 +14,7 @@ class UploadViewViewModel {
             return
         }
         
-        guard let currentUserID = Auth.auth().currentUser?.uid else {
+        guard let currentUserEmail = Auth.auth().currentUser?.email else {
             self.errorMessage = "Oturum açmış bir kullanıcı bulunamadı."
             completion(false)
             return
@@ -36,20 +36,20 @@ class UploadViewViewModel {
                     return
                 }
                 
-                self?.savePostToFirestore(UserId: currentUserID, imageUrl: imageURL, caption: caption, completion: completion)
+                self?.savePostToFirestore(UserEmail: currentUserEmail, imageUrl: imageURL, caption: caption, completion: completion)
             }
         }
     }
     
-    private func savePostToFirestore(UserId: String, imageUrl: String, caption: String, completion: @escaping(Bool) -> Void) {
+    private func savePostToFirestore(UserEmail: String, imageUrl: String, caption: String, completion: @escaping(Bool) -> Void) {
         let firestoreDataBase = Firestore.firestore()
         let newDocument = firestoreDataBase.collection("Posts").document()
         let newPosts = Posts(
             postID: newDocument.documentID,
             caption: caption,
-            authorID: UserId,
+            authorEmail: UserEmail,
             imageUrl: imageUrl,
-            timestamt: Date().timeIntervalSince1970
+            timestamp: Date().timeIntervalSince1970
         )
         do {
             try newDocument.setData(from: newPosts) { error in

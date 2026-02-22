@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="168.65671641791045" y="1241.8764302059496"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="QFc-qf-fk5">
             <objects>
-                <viewController id="6Iv-ck-81W" customClass="HomeViewController" customModule="VibeCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Iv-ck-81W" customClass="FeedViewController" customModule="VibeCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ik-6m-CQ2">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
