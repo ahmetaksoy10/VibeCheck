@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
     }
    
     @IBAction func editProfileButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "toEditProfile", sender: nil)
     }
     
 }

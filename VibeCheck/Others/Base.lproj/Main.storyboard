@@ -320,11 +320,71 @@
                         <outlet property="nameLabel" destination="IQb-ah-8sD" id="Etg-Za-ifZ"/>
                         <outlet property="profilePhoto" destination="FfY-hk-CsA" id="pUJ-Rt-jfz"/>
                         <outlet property="usernameLabel" destination="mS5-P1-Ebq" id="VBa-Du-vf7"/>
+                        <segue destination="3tC-8I-Hsc" kind="showDetail" identifier="toEditProfile" id="xhD-TF-tGz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIj-jL-BLw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168.65671641791045" y="1241.8764302059496"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="PEB-1G-PQN">
+            <objects>
+                <viewController id="3tC-8I-Hsc" customClass="EditProfileViewController" customModule="VibeCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7A-ql-Gj3">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="802"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DF8-ic-YEY">
+                                <rect key="frame" x="81" y="62" width="240" height="240"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="241.33333333333331" id="R57-xp-yuY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="241.33000000000001" id="Tvz-k2-U3a"/>
+                                    <constraint firstAttribute="width" constant="240" id="axX-yp-MXL"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOa-1I-Rji">
+                                <rect key="frame" x="16" y="384" width="370" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="A3K-UZ-zxp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgN-yH-HUq">
+                                <rect key="frame" x="16" y="477" width="370" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="3tC-8I-Hsc" eventType="touchUpInside" id="6U3-Nl-E7w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0yo-c8-CdY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0yo-c8-CdY" firstAttribute="bottom" secondItem="CgN-yH-HUq" secondAttribute="bottom" constant="269" id="1VS-4P-ro4"/>
+                            <constraint firstItem="DF8-ic-YEY" firstAttribute="centerX" secondItem="UOa-1I-Rji" secondAttribute="centerX" id="DON-1w-EzS"/>
+                            <constraint firstItem="UOa-1I-Rji" firstAttribute="leading" secondItem="M7A-ql-Gj3" secondAttribute="leadingMargin" id="KLR-Xc-hPE"/>
+                            <constraint firstItem="UOa-1I-Rji" firstAttribute="trailing" secondItem="M7A-ql-Gj3" secondAttribute="trailingMargin" id="TGd-Mk-laj"/>
+                            <constraint firstItem="UOa-1I-Rji" firstAttribute="leading" secondItem="CgN-yH-HUq" secondAttribute="leading" id="h71-oU-ccy"/>
+                            <constraint firstItem="CgN-yH-HUq" firstAttribute="top" secondItem="UOa-1I-Rji" secondAttribute="bottom" constant="59" id="hdK-lL-zHN"/>
+                            <constraint firstItem="UOa-1I-Rji" firstAttribute="trailing" secondItem="CgN-yH-HUq" secondAttribute="trailing" id="mEb-PR-B8H"/>
+                            <constraint firstItem="DF8-ic-YEY" firstAttribute="top" secondItem="0yo-c8-CdY" secondAttribute="top" constant="-0.6666666666666643" id="pYT-pw-y1s"/>
+                            <constraint firstItem="UOa-1I-Rji" firstAttribute="top" secondItem="DF8-ic-YEY" secondAttribute="bottom" constant="81.333333333333371" id="qsM-wR-ODF"/>
+                            <constraint firstItem="DF8-ic-YEY" firstAttribute="leading" secondItem="0yo-c8-CdY" secondAttribute="leading" constant="81" id="uRE-Rj-r9P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xVs-99-HuO"/>
+                    <connections>
+                        <outlet property="ProfileImage" destination="DF8-ic-YEY" id="Jt5-8h-nOE"/>
+                        <outlet property="usernameTextField" destination="UOa-1I-Rji" id="Mz3-bW-7tp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzf-d6-Qdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.65671641791045" y="1991.5331807780319"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="QFc-qf-fk5">
